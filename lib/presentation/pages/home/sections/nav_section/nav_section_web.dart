@@ -4,13 +4,12 @@ import 'package:nimbus/presentation/widgets/buttons/nimbus_button.dart';
 import 'package:nimbus/presentation/widgets/buttons/social_button.dart';
 import 'package:nimbus/presentation/widgets/empty.dart';
 import 'package:nimbus/presentation/widgets/nav_item.dart';
-import 'package:nimbus/presentation/widgets/buttons/nimbus_button_link.dart';
-import 'package:nimbus/presentation/widgets/nimbus_link.dart';
 import 'package:nimbus/presentation/widgets/nimbus_vertical_divider.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
 import 'package:nimbus/utils/functions.dart';
 import 'package:nimbus/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 const double logoSpaceLeftLg = 40.0;
 const double logoSpaceLeftSm = 20.0;
@@ -78,10 +77,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
             SizedBox(width: logoSpaceLeft),
             InkWell(
               onTap: () {},
-              child: Image.asset(
-                ImagePath.LOGO_DARK,
-                height: Sizes.HEIGHT_52,
-              ),
+              child: 'NirCrZ'.text.black.bold.xl2.make(),
             ),
             SizedBox(width: logoSpaceRight),
             NimbusVerticalDivider(),
@@ -106,7 +102,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
             ),
             NimbusVerticalDivider(),
             SizedBox(width: contactBtnSpaceLeft),
-             NimbusButton(
+            NimbusButton(
               buttonTitle: StringConst.CONTACT_ME,
               width: contactBtnWidth,
               // onPressed: () => openUrlLink(StringConst.EMAIL_URL),
@@ -155,23 +151,19 @@ class _NavSectionWebState extends State<NavSectionWeb> {
   }
 
   List<Widget> _buildSocialIcons(List<SocialButtonData> socialItems) {
+    // return socialItems.map((e) => SocialButton(
+    //   tag: e.tag,
+    //   iconData: e.iconData,
+    //   onPressed: () => openUrlLink(e.url),
+    // ),).toList();
     List<Widget> items = [];
     for (int index = 0; index < socialItems.length; index++) {
       items.add(
         SocialButton(
           tag: socialItems[index].tag,
           iconData: socialItems[index].iconData,
-          
           onPressed: () => openUrlLink(socialItems[index].url),
         ),
-        // NimBusLink(
-        //   url: socialItems[index].url,
-        //   child: SocialButton(
-        //     tag: socialItems[index].tag,
-        //     iconData: socialItems[index].iconData,
-        //     onPressed: (){},
-        //   ),
-        // ),
       );
       items.add(SpaceW16());
     }

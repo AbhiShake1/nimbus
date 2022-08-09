@@ -10,7 +10,6 @@ import 'package:nimbus/presentation/pages/home/sections/nav_section/nav_section_
 import 'package:nimbus/presentation/pages/home/sections/nav_section/nav_section_web.dart';
 import 'package:nimbus/presentation/pages/home/sections/projects_section.dart';
 import 'package:nimbus/presentation/pages/home/sections/skills_section.dart';
-import 'package:nimbus/presentation/pages/home/sections/statistics_section.dart';
 import 'package:nimbus/presentation/widgets/app_drawer.dart';
 import 'package:nimbus/presentation/widgets/nav_item.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
@@ -44,8 +43,8 @@ class _HomePageState extends State<HomePage>
     NavItemData(name: StringConst.ABOUT, key: GlobalKey()),
     NavItemData(name: StringConst.SKILLS, key: GlobalKey()),
     NavItemData(name: StringConst.PROJECTS, key: GlobalKey()),
-    NavItemData(name: StringConst.AWARDS, key: GlobalKey()),
-    NavItemData(name: StringConst.BLOG, key: GlobalKey()),
+    // NavItemData(name: StringConst.AWARDS, key: GlobalKey()),
+    // NavItemData(name: StringConst.BLOG, key: GlobalKey()),
   ];
 
   @override
@@ -169,38 +168,12 @@ class _HomePageState extends State<HomePage>
                             key: navItems[2].key,
                             child: SkillsSection(),
                           ),
-                          SizedBox(height: spacerHeight),
-                          StatisticsSection(),
-                          SizedBox(height: spacerHeight),
                           Container(
                             key: navItems[3].key,
                             child: ProjectsSection(),
                           ),
                         ],
                       ),
-                    ],
-                  ),
-                  SizedBox(height: spacerHeight),
-                  Stack(
-                    children: [
-                      Positioned(
-                        left: -assignWidth(context, 0.6),
-                        child: Image.asset(ImagePath.BLOB_ASH),
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            key: navItems[4].key,
-                            child: AwardsSection(),
-                          ),
-                          SpaceH40(),
-                          Container(
-                            key: navItems[5].key,
-                            child: BlogSection(),
-                          ),
-                          FooterSection(),
-                        ],
-                      )
                     ],
                   ),
                 ],

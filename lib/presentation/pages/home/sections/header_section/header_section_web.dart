@@ -4,9 +4,7 @@ import 'package:nimbus/presentation/layout/adaptive.dart';
 import 'package:nimbus/presentation/pages/home/sections/header_section/widgets.dart';
 import 'package:nimbus/presentation/widgets/buttons/nimbus_button.dart';
 import 'package:nimbus/presentation/widgets/content_area.dart';
-import 'package:nimbus/presentation/widgets/buttons/nimbus_button_link.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
-import 'package:nimbus/utils/functions.dart';
 import 'package:nimbus/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -14,7 +12,6 @@ const double bodyTextSizeLg = 16.0;
 const double bodyTextSizeSm = 14.0;
 const double socialTextSizeLg = 18.0;
 const double socialTextSizeSm = 14.0;
-// const double sidePadding = Sizes.PADDING_16;
 
 class HeaderSectionWeb extends StatefulWidget {
   @override
@@ -259,15 +256,7 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                                   buttonTitle: StringConst.HIRE_ME_NOW,
                                   opensUrl: true,
                                   url: StringConst.EMAIL_URL,
-                                  // onPressed: () =>
-                                  //     openUrlLink(StringConst.EMAIL_URL),
                                 ),
-                                // NimBusButtonLink(
-                                //   width: buttonWidth,
-                                //   height: buttonHeight,
-                                //   url: StringConst.EMAIL_URL,
-                                //   buttonTitle: StringConst.HIRE_ME_NOW,
-                                // ),
                               ],
                             ),
                             SpaceH30(),

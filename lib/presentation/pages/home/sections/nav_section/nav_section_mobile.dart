@@ -2,6 +2,7 @@ import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
 import 'package:nimbus/values/values.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class NavSectionMobile extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
@@ -35,10 +36,7 @@ class NavSectionMobile extends StatelessWidget {
           Spacer(),
           InkWell(
             onTap: () {},
-            child: Image.asset(
-              ImagePath.LOGO_LIGHT,
-              height: Sizes.HEIGHT_52,
-            ),
+            child: 'NirCrZ'.text.white.bold.xl2.make(),
           ),
           Spacer(),
         ],

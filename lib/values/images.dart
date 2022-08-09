@@ -14,12 +14,12 @@ class ImagePath {
   static const String BLOB_BEAN_ASH = "$imageDir/blob_bean_ash.png";
   static const String BLOB_FEMUR_ASH = "$imageDir/blob_femur_ash.png";
   static const String BLOB_SMALL_BEAN_ASH = "$imageDir/blob_small_bean_ash.png";
-  static const String BLOB_DRUMSTICK_BLACK = "$imageDir/blob_drumstick_black.png";
+  static const String BLOB_DRUMSTICK_BLACK =
+      "$imageDir/blob_drumstick_black.png";
   static const String BLOB_BLACK = "$imageDir/blob_black.png";
   static const String BOX_COVER_GOLD = "$imageDir/box_cover_gold.png";
   static const String BOX_COVER_BLACK = "$imageDir/box_cover_dark.png";
   static const String ICON_BOX = "$imageDir/icon_box.jpg";
-  
 
   // Dots Images
   static const String DOTS_GLOBE_GREY = "$imageDir/dots_globe_grey.png";
@@ -30,7 +30,6 @@ class ImagePath {
   static const String DEV_ABOUT_ME = "$imageDir/dev_aboutme.png";
   static const String DEV_HEADER = "$imageDir/dev_header.png";
   static const String DEV_AWARD = "$imageDir/dev_award.png";
-  static const String GHANA_FLAG = "$imageDir/ghana_flag.png";
 
   // Blog Images
   static const String BLOG_01 = "$imageDir/blog_01.jpg";

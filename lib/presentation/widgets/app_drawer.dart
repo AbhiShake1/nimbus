@@ -5,6 +5,7 @@ import 'package:nimbus/presentation/layout/adaptive.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
 import 'package:nimbus/utils/functions.dart';
 import 'package:nimbus/values/values.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import 'nav_item.dart';
 
@@ -52,10 +53,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 children: [
                   InkWell(
                     onTap: () {},
-                    child: Image.asset(
-                      ImagePath.LOGO_LIGHT,
-                      height: Sizes.HEIGHT_52,
-                    ),
+                    child: 'NirCrZ'.text.bold.white.xl2.make(),
                   ),
                   Spacer(),
                   InkWell(
@@ -74,7 +72,6 @@ class _AppDrawerState extends State<AppDrawer> {
                 menuList: widget.menuList,
               ),
               Spacer(flex: 6),
-              _buildFooterText(),
             ],
           ),
         ),
@@ -131,84 +128,5 @@ class _AppDrawerState extends State<AppDrawer> {
 
   _closeDrawer() {
     context.router.pop();
-  }
-
-  Widget _buildFooterText() {
-    TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? footerTextStyle = textTheme.caption?.copyWith(
-      color: AppColors.primaryText2,
-      fontWeight: FontWeight.bold,
-    );
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Center(
-          child: SelectableText.rich(
-            TextSpan(
-              text: StringConst.RIGHTS_RESERVED + " ",
-              style: footerTextStyle,
-              children: [
-                TextSpan(text: StringConst.DESIGNED_BY + " "),
-                TextSpan(
-                  text: StringConst.WEB_GENIUS_LAB,
-                  style: footerTextStyle?.copyWith(
-                    decoration: TextDecoration.underline,
-                    fontWeight: FontWeight.w900,
-                    color: AppColors.white,
-                  ),
-                ),
-              ],
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            RichText(
-              text: TextSpan(
-                text: StringConst.BUILT_BY + " ",
-                style: footerTextStyle,
-                children: [
-                  TextSpan(
-                    text: StringConst.DAVID_COBBINA + ". ",
-                    style: footerTextStyle?.copyWith(
-                      decoration: TextDecoration.underline,
-                      fontWeight: FontWeight.w900,
-                      color: AppColors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        SpaceH4(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(StringConst.MADE_IN_GHANA, style: footerTextStyle),
-            SpaceW4(),
-            ClipRRect(
-              borderRadius: BorderRadius.all(const Radius.circular(20)),
-              child: Image.asset(
-                ImagePath.GHANA_FLAG,
-                width: Sizes.WIDTH_16,
-                height: Sizes.HEIGHT_16,
-                fit: BoxFit.cover,
-              ),
-            ),
-            SpaceW4(),
-            Text(StringConst.WITH_LOVE, style: footerTextStyle),
-            SpaceW4(),
-            Icon(
-              FontAwesomeIcons.solidHeart,
-              color: AppColors.red,
-              size: Sizes.ICON_SIZE_12,
-            ),
-          ],
-        ),
-      ],
-    );
   }
 }

@@ -4,9 +4,9 @@ import 'package:nimbus/presentation/layout/adaptive.dart';
 import 'package:nimbus/presentation/pages/home/sections/header_section/widgets.dart';
 import 'package:nimbus/presentation/widgets/buttons/nimbus_button.dart';
 import 'package:nimbus/presentation/widgets/content_area.dart';
-import 'package:nimbus/presentation/widgets/buttons/nimbus_button_link.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
 import 'package:nimbus/values/values.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const double bodyTextSizeLg = 16.0;
 const double bodyTextSizeSm = 14.0;
@@ -75,30 +75,17 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
             height: heightOfStack,
             child: Stack(
               children: [
-                Stack(
-                  children: [
-                    // Positioned(
-                    //   left: -(sizeOfBlobSm * 0.7),
-                    //   top: blobOffset,
-                    //   child: Image.asset(
-                    //     ImagePath.BLOB_BLACK,
-                    //     height: sizeOfBlobSm,
-                    //     width: sizeOfBlobSm,
-                    //   ),
-                    // ),
-                    Positioned(
-                      left: -(sizeOfGoldenGlobe / 3),
-                      top: blobOffset + dottedGoldenGlobeOffset,
-                      child: RotationTransition(
-                        turns: _controller,
-                        child: Image.asset(
-                          ImagePath.DOTS_GLOBE_YELLOW,
-                          width: sizeOfGoldenGlobe,
-                          height: sizeOfGoldenGlobe,
-                        ),
-                      ),
+                Positioned(
+                  left: -(sizeOfGoldenGlobe / 3),
+                  top: blobOffset + dottedGoldenGlobeOffset,
+                  child: RotationTransition(
+                    turns: _controller,
+                    child: Image.asset(
+                      ImagePath.DOTS_GLOBE_YELLOW,
+                      width: sizeOfGoldenGlobe,
+                      height: sizeOfGoldenGlobe,
                     ),
-                  ],
+                  ),
                 ),
                 Positioned(
                   right: -(sizeOfBlobSm),
@@ -236,15 +223,9 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                                   width: buttonWidth,
                                   height: buttonHeight,
                                   buttonTitle: StringConst.HIRE_ME_NOW,
-                                  onPressed: () {},
+                                  onPressed: () => launchUrl(
+                                      Uri.parse(StringConst.EMAIL_URL)),
                                 ),
-                                // NimBusButtonLink(
-                                //   width: buttonWidth,
-                                //   height: buttonHeight,
-                                //   url: StringConst.EMAIL_URL,
-                                //   buttonColor: AppColors.primaryColor,
-                                //   buttonTitle: StringConst.HIRE_ME_NOW,
-                                // ),
                               ],
                             ),
                             SpaceH30(),
