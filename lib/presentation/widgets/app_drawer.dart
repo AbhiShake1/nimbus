@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nimbus/presentation/layout/adaptive.dart';
-import 'package:nimbus/presentation/widgets/spaces.dart';
 import 'package:nimbus/utils/functions.dart';
 import 'package:nimbus/values/values.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -66,7 +64,7 @@ class _AppDrawerState extends State<AppDrawer> {
                   ),
                 ],
               ),
-              Spacer(flex: 2),
+              Spacer(flex: 1),
               ..._buildMenuList(
                 context: context,
                 menuList: widget.menuList,
