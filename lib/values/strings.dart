@@ -76,16 +76,16 @@ class StringConst {
   static const String TOOLS_3_PROFICIENCY = "70%";
   static const String SKILLS_1 = "Web Development";
   static const String SKILLS_1_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+      "I believe direct collaboration with our clients is essential to bringing unique";
   static const String SKILLS_2 = "Graphic Design";
   static const String SKILLS_2_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+      "I believe direct collaboration with our clients is essential to bringing unique";
   static const String SKILLS_3 = "Motion Design";
   static const String SKILLS_3_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+      "I believe direct collaboration with our clients is essential to bringing unique";
   static const String SKILLS_4 = "Photo Retouch";
   static const String SKILLS_4_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+      "I believe direct collaboration with our clients is essential to bringing unique";
 
   //Stats Section
   static const String HAPPY_CLIENTS = "Happy Clients";
